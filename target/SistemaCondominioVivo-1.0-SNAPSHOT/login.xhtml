@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <style type="text/css">
+            .control-group{
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 col-sm-offset-4">
+                    <h1 class="text-center">Login</h1>
+                    <h:form class="form-horizontal">
+                        <div class="control-group">
+                            <label class="control-label" for="inputEmail">E-mail</label>
+                            <div class="controls">
+                                <h:inputText styleClass="form-control" value="#{mnLogin.email}"/>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="inputPassword">Senha</label>
+                            <div class="controls">
+                                <h:inputSecret class="form-control" value="#{mnLogin.senha}"/>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <label class="checkbox"><input type="checkbox" /> Lembrar senha</label>
+                                <h:commandButton styleClass="btn btn-primary" value="Entrar" action="#{mnLogin.realizarLogin()}"/>
+                            </div>
+                        </div>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+    </h:body>
+</html>

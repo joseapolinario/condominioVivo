@@ -1,0 +1,35 @@
+
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <nav class="navbar navbar-header topo clearfix">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">CondominioVivo</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><h:link value="Home" outcome="home"/></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Cadastrar <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><h:link value="Condominio" outcome="cadCondomino"/></li>
+                        <li><h:link value="Funcionario" outcome="cadFuncionario"/></li>
+                        <li><h:link value="Morador" outcome="cadMorador"/></li>
+                        <li><h:link value="Area comum" outcome="cadLocal"/></li>
+                    </ul>
+                </li>
+                <li><a href="#">Ocorrencias</a></li>
+                <li><a href="#">Mais</a></li>
+            </ul>
+            <h:form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="glyphicon glyphicon-envelope wer"></a></li>
+                    <li>
+                        <h:commandLink action="#{mnLogin.sair}" styleClass="glyphicon glyphicon-log-out wer"/>
+                    </li>
+                </ul>
+            </h:form>
+        </div>
+    </nav>
+</ui:composition>

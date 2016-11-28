@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../default.css"/>
+
+    </h:head>
+    <h:body>
+        <ui:include src="../WEB-INF/menutopo.xhtml"/>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">
+                    <h2>Cadastrar morador</h2>
+                    <div class="form-group">
+                        <h:messages class="erroFormulario"/>
+                        <h:form>
+                            <h:outputLabel>Nome :</h:outputLabel> <h:inputText value="#{mnMorador.morador.nome}" class="form-control"/>
+                            <h:outputLabel>Email :</h:outputLabel> <h:inputText value="#{mnMorador.morador.email}" class="form-control"/>
+                            <h:outputLabel>Apartamento: </h:outputLabel> <h:inputText value="#{mnMorador.morador.apartamento}" class="form-control"/>
+                            <h:outputLabel>Telefone: </h:outputLabel> <h:inputText value="#{mnMorador.morador.telefone}" class="form-control"/>
+                            <h:outputLabel>Rg: </h:outputLabel> <h:inputText value="#{mnMorador.morador.rg}" class="form-control"/>
+
+                            <h:commandButton action="#{mnMorador.cadastrarMorador}" value="Cadastrar" class="btn btn-primary"/>
+                        </h:form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </h:body>
+</html>
+

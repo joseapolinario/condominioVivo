@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Comunicado</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="../default.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    </h:head>
+    <h:body>
+
+        <ui:include src="../WEB-INF/menutopo.xhtml"/>
+
+        <div class="container">
+            <div class="form-group">
+                <h:form class="form-horizontal">
+                    <h:messages class="erroFormulario"/>
+
+                    <h:outputLabel>Titulo</h:outputLabel> <h:inputText value="#{mnCadastroComunicado.comunicado.nomeComunicado}" class="form-control"/>
+                    <h:outputLabel>Comunicado</h:outputLabel> <h:inputText value="#{mnCadastroComunicado.comunicado.comunicado}" class="form-control"/>
+
+                    <h:commandButton value="Cadastrar" action="#{mnCadastroComunicado.cadastarComunicado()}" class="btn btn-primary"/>
+                </h:form>
+            </div>
+        </div>
+    </h:body>
+</html>
